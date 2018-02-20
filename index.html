@@ -107,7 +107,32 @@
 	
 </div>
 <p style="text-align:center;position:absolute;bottom:0px;left:50%;"><script type="text/javascript" src="http://tajs.qq.com/stats?sId=59154049" charset="UTF-8"></script></p>
-
+<SCRIPT language=javascript> 
+function clickk(e) {
+	if (document.all) {
+		if (event.button==2||event.button==3) { 
+			alert("欢迎光临寒舍，有什么需要帮忙的话，请与站长联系！谢谢您的合作！！！");
+			oncontextmenu='return false';
+		}
+	}
+	if (document.layers) {
+		if (e.which == 3) {
+			oncontextmenu='return false';
+		}
+	}
+}
+	if (document.layers) {
+		document.captureEvents(Event.MOUSEDOWN);
+	}
+	document.onmousedown=clickk;
+	document.oncontextmenu = new Function("return false;")
+document.onkeydown =document.onkeyup = document.onkeypress=function(){ 
+	if(window.event.keyCode == 123) { 
+		window.event.returnValue=false;
+		return(false); 
+	} 
+} 
+</SCRIPT> 
 	
 <script>
 		window.requestAnimFrame = ( function() {
